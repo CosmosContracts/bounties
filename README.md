@@ -2,7 +2,7 @@
 
 Want earn some $JUNO and build reputation? Welcome to Juno bounties. 
 
-To claim a bounty, submit a PR to this repo and add your Juno address to the corresponding row in the table. A member of the core team will evaluate your claim, and if successful you'll be paid out the reward.
+To claim a bounty, first you should message the core team to express your interest in one of the bounties. If approved you can start working on it and when it's complete you can submit a PR to this repo and add your Juno address to the corresponding row in the table. A member of the core team will evaluate your claim, and if successful you'll be paid out the reward.
 
 _In addition, if you go above and beyond the call of duty, the reviewers may decide to offer a bonus._
 
