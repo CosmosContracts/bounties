@@ -1,4 +1,8 @@
-# Juno Bounties
+# Junø Bounties
+
+![Juno Bounties 1](https://user-images.githubusercontent.com/79812965/142215575-14f73bb6-cb9c-492c-92e5-47dde2d31133.png)
+
+
 
 Want earn some $JUNO and build reputation? Welcome to Juno bounties. 
 
