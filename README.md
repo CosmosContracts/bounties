@@ -19,7 +19,7 @@ For these challenges, you'll need to create example CosmWasm contracts and docum
 
 | Task                 | Description                                                                                                                              | Reward     | Claimed by |
 |:---------------------|:-----------------------------------------------------------------------------------------------------------------------------------------|:-----------|:-----------|
-| Query price over IBC | Query price information for a trading pair over IBC for use in a contract.                                                               | 1000 JUNOO |            |
+| Query price over IBC | Query price information for a trading pair over IBC for use in a contract.                                                               | 1000 JUNO  |            |
 | Trade over IBC       | Swap two tokens over IBC on Osmosis.                                                                                                     | 5000 JUNO  |            |
 | LP tokens over IBC   | Add tokens to a Liquidity pool, bond them to receive LP rewards. Should also be able to unbound and remove tokens from a liquidity pool. | 10000 JUNO |            |
 
