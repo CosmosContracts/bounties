@@ -10,6 +10,27 @@ To claim a bounty, first you should message the core team to express your intere
 
 _In addition, if you go above and beyond the call of duty, the reviewers may decide to offer a bonus._
 
+## Bug Bounties
+
+Eligible GitHub repositories for Bug Bounties include:
+- [juno](https://github.com/CosmosContracts/juno): the Juno blockchain source code.
+- [wasmd](https://github.com/cosmwasm/wasmd): the core smart contract module used by the Juno Blockchain.
+- [cw-plus](https://github.com/cosmwasm/cw-plus): a library of contracts used by many Juno Projects.
+
+Please confidentially report vulnerabilities to `Meow Stargaze ✨🔭#1736` or `dimi 🦙#2998` on the [Juno Discord](https://discord.gg/QcWPfK4gJ2). Rewards will be determined based on the severity and whether or not a fix is provide.
+
+**Critical Vulnerability:**
+
+A critical vulnerability is something that would take down the chain, or cause the token to devalue in a serious manner.
+
+**Medium Vulnerability:**
+
+A medium vulnerability is something that could potentially disrupt the chain.
+
+**Low Vulnerability:**
+
+A low vulnerability is something that might slow down the chain or make it less efficient.
+
 ## IBC
 One of the most exciting things about Juno smart contracts, is that they are support InterChain by default. Currently, you can send tokens over IBC with a smart contract, but much more is possible. 
 
