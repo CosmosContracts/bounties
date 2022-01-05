@@ -12,7 +12,7 @@ _In addition, if you go above and beyond the call of duty, the reviewers may dec
 
 ## IBC
 
-One of the most exciting things about Juno smart contracts, is that they are support InterChain by default. Currently, you can send tokens over IBC with a smart contract, but much more is possible.
+One of the most exciting things about Juno smart contracts, is that they support the [Inter-Blockchain Communication protocol (IBC)](https://ibcprotocol.org/) by default. So much is possible.
 
 ### Juno IBC Challenges
 
