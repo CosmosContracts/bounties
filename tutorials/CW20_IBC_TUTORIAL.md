@@ -340,7 +340,7 @@ Our transfer of a CW20 token from source to destination chain will include sendi
 
 Let's construct our transaction to transfer tokens across.
 
-Firstly, we'll take a standard cw20 token transfer, which includes a transfer of 9000 BRO tokens through our CW20 token contract ``juno19ck36cn5kxgm85j2ca3xn2thjc9rnjw3atk7x5c42l6pnd2tll0sy2naae`:
+Firstly, we'll take a standard cw20 token transfer, which includes a transfer of 9000 BRO tokens through our CW20 token contract `juno19ck36cn5kxgm85j2ca3xn2thjc9rnjw3atk7x5c42l6pnd2tll0sy2naae`:
 
 ```
 {"send": {"contract": "juno19ck36cn5kxgm85j2ca3xn2thjc9rnjw3atk7x5c42l6pnd2tll0sy2naae", "amount": "9000","msg":""}}
