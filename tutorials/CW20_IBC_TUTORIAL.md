@@ -352,32 +352,25 @@ Our transfer of a CW20 token from source to destination chain will include sendi
 
 Let's construct our transaction to transfer tokens across.
 
-Firstly, we'll take a standard cw20 token transfer, which includes a transfer of 9000 BRO tokens through our CW20 token contract ``juno19ck36cn5kxgm85j2ca3xn2thjc9rnjw3atk7x5c42l6pnd2tll0sy2naa`:
+Firstly, we'll take a standard cw20 token transfer, which includes a transfer of 9000 BRO tokens through our CW20 token contract `juno19ck36cn5kxgm85j2ca3xn2thjc9rnjw3atk7x5c42l6pnd2tll0sy2naae`:
 
-``````
+```
 {"send": {"contract": "juno19ck36cn5kxgm85j2ca3xn2thjc9rnjw3atk7x5c42l6pnd2tll0sy2naae", "amount": "9000","msg":""}}
 ```
-```
+
 Secondly, we want to insert in the msg parameter the execution that we require to take place when these tokens arrive at their first destination, our ICS20 contract. This is the TransferMsg execution path, which requires the following parameters:
 ```
 {"channel":"<channel id>","remote_address":"<destination chain address>"}
 ```
-In the channel ID, enter your relayer's newly created channel ID between source and destination chains, whilst in remote_address, add the address at which you want to receive the BRO tokens on the destination chain. Onc
+In the channel ID, enter your relayer's newly created channel ID between source and destination chains, whilst in remote_address, add the address at which you want to receive the BRO tokens on the destination chain.
+
+export EXECUTE='{"send": {"contract": "juno19ck36cn5kxgm85j2ca3xn2thjc9rnjw3atk7x5c42l6pnd2tll0sy2naae", "amount": "9000","msg":"eyJjaGFubmVsIjoiY2hhbm5lbC0wIiwicmVtb3RlX2FkZHJlc3MiOiJqdW5vMTZnMnJhaGY1ODQ2cnh6cDNmd2xzd3kwOGZ6OGNjdXdrMDNrNTd5In0="}}'
+
+juno15583yvj30uu6xs4etegyptr2jx5v8s8lya5y245vq56yw0ttjrzqalezu6
 
 
-Once you have the above ready, grab your json string that incl ()
-
-
-
-Next, we'll use the above json strings to construct our transactions. Copy your base64 encoded string into the 'msg' parameter of the previous 'send' json string.
-
-You can then go ahead and save this as an EXECUTE variable, so that it can be included in the following command:
-
-export EXECUTE='{"send": {"contract": "juno19ck36cn5kxgm85j2ca3xn2thjc9rnjw3atk7x5c42l6pnd2tll0sy2naae", "amount": "9000","msg":"eyJjaGFubmVsIjoiY2hhbm5lbC00NiIsInJlbW90ZV9hZGRyZXNzIjoianVubzE2ZzJyYWhmNTg0NnJ4enAzZndsc3d5MDhmejhjY3V3azAzazU3eSJ9="}}'
-
-
-
-junod tx wasm execute juno15583yvj30uu6xs4etegyptr2jx5v8s8lya5y245vq56yw0ttjrzqalezu6 "$EXECUTE" --gas auto --fees 100000ujunox --chain-id uni --node https://rpc.juno.giansalex.dev:443 --from testnetAccount
+anon@box:~/.ibc-setup$ export EXECUTE='{"send": {"contract": "juno19ck36cn5kxgm85j2ca3xn2thjc9rnjw3atk7x5c42l6pnd2tll0sy2naae", "amount": "9000","msg":"eyJjaGFubmVsIjoiY2hhbm5lbC00NiIsInJlbW90ZV9hZGRyZXNzIjoianVubzE2ZzJyYWhmNTg0NnJ4enAzZndsc3d5MDhmejhjY3V3azAzazU3eSJ9"}}'
+anon@box:~/.ibc-setup$ junod tx wasm execute juno15583yvj30uu6xs4etegyptr2jx5v8s8lya5y245vq56yw0ttjrzqalezu6 "$EXECUTE" --gas auto --fees 100000ujunox --chain-id uni --node https://rpc.juno.giansalex.dev:443 --from testnetAccount
 
 
 ### Proof
@@ -392,11 +385,13 @@ junod tx wasm execute juno15583yvj30uu6xs4etegyptr2jx5v8s8lya5y245vq56yw0ttjrzqa
 
 ![List of Channels](../images/list_channels.png)
 
-#### T
+#### TX which sends BroCoin CW20 to the Cw20-ICS20 contract
 
 - https://blueprints.juno.giansalex.dev/#/transactions/2901C3E20A1428F969E7E93C1BB32C39218C2392965B29F34B9D1B208EFB5D3B
 
-![Packet Relay Transaction](./images/packet_relay_transaction.png)
+![Packet Relay Transaction](../images/packet_relay_transaction.png)
+
+#### Decoding the MSG inside the CW20 send
 
 - https://www.base64decode.org/
 
@@ -404,3 +399,6 @@ junod tx wasm execute juno15583yvj30uu6xs4etegyptr2jx5v8s8lya5y245vq56yw0ttjrzqa
 
 - https://blueprints.juno.giansalex.dev/#/contracts/juno15583yvj30uu6xs4etegyptr2jx5v8s8lya5y245vq56yw0ttjrzqalezu6
 
+#### Proof of receipt on target chain
+
+![Proof of receipt](../images/proof_of_receipt.png)
