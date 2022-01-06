@@ -150,7 +150,7 @@ A compiled result should have been created in the `artifacts` folder called `cw2
 RES=$(junod tx wasm store artifacts/cw20_ics20.wasm --from testnetAccount -y --output json --chain-id uni --node https://rpc.juno.giansalex.dev:443 --gas auto --fees 208566ujunox)
 ```
 
-You can echo the $RES to confirm the transaction was sent. If you have an error with the fee, adjust it accordingly and retry the above transaction. A successful transaction looks like this by running this command `echo $RES`:
+You can echo the `$RES` to confirm the transaction was sent. If you have an error with the fee, adjust it accordingly and retry the above transaction. A successful transaction looks like this by running this command `echo $RES`:
 
 ```
 {"height":"0","txhash":"103AD26AC46C77CDA674B0A160A521DA63A90775398B926369394BA8CF39579B","codespace":"","code":0,"data":"","raw_log":"[]","logs":[],"info":"","gas_wanted":"0","gas_used":"0","tx":null,"timestamp":"","events":[]}
@@ -170,7 +170,7 @@ raw_log: '[{"events":[{"type":"message","attributes":[{"key":"action","value":"/
 
 As you can see here `{"key":"code_id","value":"308"}`, `308` is the code ID for my contract. Yours will be higher as uploads are enumerated in sequential order. You can also replace the tx hash in this link with your own: `https://blueprints.juno.giansalex.dev/#/transactions/YOUR_TX_HASH_HERE` and browse it. 
 
-We now want to instantiate the contract, creating our instance of the code uploaded above.(You may also use my uploaded 308 contract, instantiate it and use it as you need). Write the following command in your terminal to pass the $INIT instantiation parameters to the cosmwasm constructor fundction, to create a contract:
+We now want to instantiate the contract, creating our instance of the code uploaded above.(You may also use my uploaded 308 contract, instantiate it and use it as you need). Write the following command in your terminal to pass the `$INIT` instantiation parameters to the cosmwasm constructor fundction, to create a contract:
 
 ```
 export INIT='{"default_timeout": 1200}'
