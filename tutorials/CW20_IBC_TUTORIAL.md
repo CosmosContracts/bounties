@@ -336,23 +336,11 @@ Take note of the successfully instantiated contract by querying the transaction 
 
 ## Executing Transfers
 
-Here we shall execute a CW20 transfer from the uni testnet to the local testing network we have running, we shall transfer the new BroCoin we instantiated. We transfer the token using this command:
-
-```
-export EXECUTE='{"transfer":{"channel":"channel-0","remote_address":"YOUR_LOCAL_NET_ACCOUNT_HERE"}}'
-junod tx wasm execute $CONTRACT "$EXECUTE"  --amount <amount to transfer> --gas-prices 0ustake --gas 100000 --chain-id testing  --from key -y
-```
-
-```
-export EXECUTE='{"transfer":{"channel":"channel-0","remote_address":"juno16g2rahf5846rxzp3fwlswy08fz8ccuwk03k57y"}}'
-junod tx wasm execute juno19ck36cn5kxgm85j2ca3xn2thjc9rnjw3atk7x5c42l6pnd2tll0sy2naae "$EXECUTE"  --amount 10000000BRO --gas-prices 0.1ustake --gas 100000 --chain-id uni --node https://rpc.juno.giansalex.dev:443
-```
-
 Our transfer of a CW20 token from source to destination chain will include sending tokens to our ICS20 contract, and in the msg parameter include a base64 encoded that executes the TransferMsg function of that contract. The below message includes a cw20 transfer of 9000 BRO tokens to our ics20 IBC contract. In this message, the msg parameter includes a base64 encoded json string that provides the json schema of the TransferMsg, which includes the IBC channel ID and remote_address. The remote_address is the address at which the IBC tokens will be received in the destination chain whilst the channel ID is the ID generated using our relayer, that connects to our ICS20 contract and the destination chain. 
 
 Let's construct our transaction to transfer tokens across.
 
-Firstly, we'll take a standard cw20 token transfer, which includes a transfer of 9000 BRO tokens through our CW20 token contract `juno19ck36cn5kxgm85j2ca3xn2thjc9rnjw3atk7x5c42l6pnd2tll0sy2naae`:
+Firstly, we'll take a standard cw20 token transfer, which includes a transfer of 9000 BRO tokens through our CW20 token contract ``juno19ck36cn5kxgm85j2ca3xn2thjc9rnjw3atk7x5c42l6pnd2tll0sy2naae`:
 
 ```
 {"send": {"contract": "juno19ck36cn5kxgm85j2ca3xn2thjc9rnjw3atk7x5c42l6pnd2tll0sy2naae", "amount": "9000","msg":""}}
@@ -362,16 +350,22 @@ Secondly, we want to insert in the msg parameter the execution that we require t
 ```
 {"channel":"<channel id>","remote_address":"<destination chain address>"}
 ```
-In the channel ID, enter your relayer's newly created channel ID between source and destination chains, whilst in remote_address, add the address at which you want to receive the BRO tokens on the destination chain.
+In the channel ID, enter your relayer's newly created channel ID between source and destination chains, whilst in remote_address, add the address at which you want to receive the BRO tokens on the destination chain. Once these are filled in, go to https://www.base64encode.org/ and encode the string to base64.
 
-export EXECUTE='{"send": {"contract": "juno19ck36cn5kxgm85j2ca3xn2thjc9rnjw3atk7x5c42l6pnd2tll0sy2naae", "amount": "9000","msg":"eyJjaGFubmVsIjoiY2hhbm5lbC0wIiwicmVtb3RlX2FkZHJlc3MiOiJqdW5vMTZnMnJhaGY1ODQ2cnh6cDNmd2xzd3kwOGZ6OGNjdXdrMDNrNTd5In0="}}'
+For example, `{"channel":"channel-46","remote_address":"juno16g2rahf5846rxzp3fwlswy08fz8ccuwk03k57y"}` becomes `eyJjaGFubmVsIjoiY2hhbm5lbC00NiIsInJlbW90ZV9hZGRyZXNzIjoianVubzE2ZzJyYWhmNTg0NnJ4enAzZndsc3d5MDhmejhjY3V3azAzazU3eSJ9=`
 
-juno15583yvj30uu6xs4etegyptr2jx5v8s8lya5y245vq56yw0ttjrzqalezu6
+Next, we'll use the above json strings to construct our transactions. Copy your base64 encoded string into the 'msg' parameter of the previous 'send' json string.
 
+You can then go ahead and save this as an EXECUTE variable, so that it can be included in the following command:
+```
+export EXECUTE='{"send": {"contract": "juno19ck36cn5kxgm85j2ca3xn2thjc9rnjw3atk7x5c42l6pnd2tll0sy2naae", "amount": "9000","msg":"eyJjaGFubmVsIjoiY2hhbm5lbC00NiIsInJlbW90ZV9hZGRyZXNzIjoianVubzE2ZzJyYWhmNTg0NnJ4enAzZndsc3d5MDhmejhjY3V3azAzazU3eSJ9="}}'
+```
 
-anon@box:~/.ibc-setup$ export EXECUTE='{"send": {"contract": "juno19ck36cn5kxgm85j2ca3xn2thjc9rnjw3atk7x5c42l6pnd2tll0sy2naae", "amount": "9000","msg":"eyJjaGFubmVsIjoiY2hhbm5lbC00NiIsInJlbW90ZV9hZGRyZXNzIjoianVubzE2ZzJyYWhmNTg0NnJ4enAzZndsc3d5MDhmejhjY3V3azAzazU3eSJ9"}}'
-anon@box:~/.ibc-setup$ junod tx wasm execute juno15583yvj30uu6xs4etegyptr2jx5v8s8lya5y245vq56yw0ttjrzqalezu6 "$EXECUTE" --gas auto --fees 100000ujunox --chain-id uni --node https://rpc.juno.giansalex.dev:443 --from testnetAccount
+We're at the final step! Go ahead and run the execute function on our CW20 contract, which will then execute another function on our ICS20 IBC contract.
 
+```
+junod tx wasm execute juno15583yvj30uu6xs4etegyptr2jx5v8s8lya5y245vq56yw0ttjrzqalezu6 "$EXECUTE" --gas auto --fees 100000ujunox --chain-id uni --node https://rpc.juno.giansalex.dev:443 --from testnetAccount
+```
 
 ### Proof
 
