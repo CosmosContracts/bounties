@@ -39,6 +39,14 @@ Useful resources include:
 - [Create Custom IBC Application](https://docs.cosmos.network/master/ibc/custom.html)
 - [Example Smart Contract for ICS20](https://github.com/CosmWasm/cw-plus/tree/main/contracts/cw20-ics20)
 
+### Band protocol IBC Challenge
+
+Band protocol supports [requesting oracle data over IBC](https://docs.bandchain.org/whitepaper/cosmos-ibc.html). For this challenge, please implement a smart contract that demonstrates requesting oracle data over IBC. Be sure to demonstrate this working on Juno mainnet and provide adequate documentation for replication in the contract's `README.md` file.
+
+| Task                         | Description                                           | Reward   | Claimed by |
+| :--------------------------- | :---------------------------------------------------- | :------- | :--------- |
+| Request oracle data over IBC | Implement a contract to request oracle data over IBC. | 500 JUNO |            |
+
 #### Rules
 
 1. Submissions are open source. By submitting a PR, you're agreeing to License your contribution under an Open Source license.
