@@ -35,6 +35,8 @@ A low vulnerability is something that might slow down the chain or make it less 
 
 One of the most exciting things about Juno smart contracts, is that they support the [Inter-Blockchain Communication protocol (IBC)](https://ibcprotocol.org/) by default. So much is possible.
 
+To claim these bounties, you must provide working open source code and successfully make transactions on _mainnets_ of any of the networks specified.
+
 ### Juno IBC Challenges
 
 | Task                     | Description                                                                                   | Reward   | Claimed by |
