@@ -40,9 +40,9 @@ To claim these bounties, you must provide working open source code and successfu
 
 ### Juno IBC Challenges
 
-| Task                                                                                                            | Description                                                                                                                                                                                  | Reward   | Claimed by |
-| :-------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------- | :--------- |
-| First cw20 sent over IBC                                                                                        | Send a cw20 over IBC, please provide proof in your PR and describe how you accomplished this.                                                                                                | 100 JUNO |            |
+| Task                     | Description                                                                                   | Reward   | Claimed by                                  |
+| :----------------------- | :-------------------------------------------------------------------------------------------- | :------- | :------------------------------------------ |
+| [First cw20 sent over IBC](https://github.com/CosmosContracts/bounties/pull/8) | Send a cw20 over IBC, document and provide proof of accomplishment. | 100 JUNO | juno1jax0gp2kczt3mmp68xt967z92yjnmrdm6ujrew |
 | Make [cw20-ics20 contract](https://github.com/CosmWasm/cw-plus/tree/main/contracts/cw20-ics20) production ready | Help in the effort to make cw20-ics20 production ready. This award will be distributed to multiple individuals. Ways to contribute include coding, finding bugs, testing, and documentation. | 500 JUNO |            |
 
 ### Osmosis IBC Challenges
