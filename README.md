@@ -13,6 +13,7 @@ _In addition, if you go above and beyond the call of duty, the reviewers may dec
 ## Bug Bounties
 
 Eligible GitHub repositories for Bug Bounties include:
+
 - [juno](https://github.com/CosmosContracts/juno): the Juno blockchain source code.
 - [wasmd](https://github.com/cosmwasm/wasmd): the core smart contract module used by the Juno Blockchain.
 - [cw-plus](https://github.com/cosmwasm/cw-plus): a library of contracts used by many Juno Projects.
@@ -39,9 +40,10 @@ To claim these bounties, you must provide working open source code and successfu
 
 ### Juno IBC Challenges
 
-| Task                     | Description                                                                                   | Reward   | Claimed by |
-| :----------------------- | :-------------------------------------------------------------------------------------------- | :------- | :--------- |
-| First cw20 sent over IBC | Send a cw20 over IBC, please provide proof in your PR and describe how you accomplished this. | 100 JUNO |            |
+| Task                                                                                                            | Description                                                                                                                                                                                  | Reward   | Claimed by |
+| :-------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------- | :--------- |
+| First cw20 sent over IBC                                                                                        | Send a cw20 over IBC, please provide proof in your PR and describe how you accomplished this.                                                                                                | 100 JUNO |            |
+| Make [cw20-ics20 contract](https://github.com/CosmWasm/cw-plus/tree/main/contracts/cw20-ics20) production ready | Help in the effort to make cw20-ics20 production ready. This award will be distributed to multiple individuals. Ways to contribute include coding, finding bugs, testing, and documentation. | 500 JUNO |            |
 
 ### Osmosis IBC Challenges
 
