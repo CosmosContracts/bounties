@@ -40,24 +40,22 @@ To claim these bounties, you must provide working open source code and successfu
 
 ### Juno IBC Challenges
 
-| Task                     | Description                                                                                   | Reward   | Claimed by                                  |
-| :----------------------- | :-------------------------------------------------------------------------------------------- | :------- | :------------------------------------------ |
-| [First cw20 sent over IBC](https://github.com/CosmosContracts/bounties/pull/8) | Send a cw20 over IBC, document and provide proof of accomplishment. | 100 JUNO | juno1jax0gp2kczt3mmp68xt967z92yjnmrdm6ujrew |
-| Make [cw20-ics20 contract](https://github.com/CosmWasm/cw-plus/tree/main/contracts/cw20-ics20) production ready | Help in the effort to make cw20-ics20 production ready. This award will be distributed to multiple individuals. Ways to contribute include coding, finding bugs, testing, and documentation. | 500 JUNO |            |
+| Task                                                                                                            | Description                                                                                                                                                                                  | Reward   | PR(s)                                                        | Claimed by                                  |
+| :-------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------- | ------------------------------------------------------------ | :------------------------------------------ |
+| [First cw20 sent over IBC](https://github.com/CosmosContracts/bounties/pull/8)                                  | Send a cw20 over IBC, document and provide proof of accomplishment.                                                                                                                          | 100 JUNO | [#8](https://github.com/CosmosContracts/bounties/pull/8)     | juno1jax0gp2kczt3mmp68xt967z92yjnmrdm6ujrew |
+| Make [cw20-ics20 contract](https://github.com/CosmWasm/cw-plus/tree/main/contracts/cw20-ics20) production ready | Help in the effort to make cw20-ics20 production ready. This award will be distributed to multiple individuals. Ways to contribute include coding, finding bugs, testing, and documentation. | 500 JUNO | [cw-plus #631](https://github.com/CosmWasm/cw-plus/pull/631) |                                             |
 
 ### Osmosis IBC Challenges
 
 For these challenges, you'll need to create example CosmWasm contracts and documentation for interacting with Osmosis over IBC. In addition to $JUNO rewards, these challenges also have $OSMO rewards (amount TBD)!
 
-| Task                 | Description                                                                                                                              | Reward     | Claimed by |
-| :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------- | :--------- | :--------- |
-| Query price over IBC | Query price information for a trading pair over IBC for use in a contract.                                                               | 1000 JUNO  |  @giansalex |
-| Trade over IBC       | Swap two tokens over IBC on Osmosis.                                                                                                     | 5000 JUNO  |            |
-| LP tokens over IBC   | Add tokens to a Liquidity pool, bond them to receive LP rewards. Should also be able to unbound and remove tokens from a liquidity pool. | 10000 JUNO |            |
+NOTE: These challenges are currently BLOCKED until Osmosis adds support for IBC queries or CosmWasm.
 
-- Note, claiming these will require sign off from both a Juno and Osmosis core team member.
-
-These challenges will involve working with the Cosmos SDK as well as writing an example CosmWasm contract.
+| Task                 | Description                                                                                                                              | Reward         | PR                                                       | Claimed by |
+| :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------- | :------------- | -------------------------------------------------------- | :--------- |
+| Query price over IBC | Query price information for a trading pair over IBC for use in a contract.                                                               | Partial Payout | [#5](https://github.com/CosmosContracts/bounties/pull/5) | @giansalex |
+| Trade over IBC       | Swap two tokens over IBC on Osmosis.                                                                                                     | BLOCKED        |                                                          |            |
+| LP tokens over IBC   | Add tokens to a Liquidity pool, bond them to receive LP rewards. Should also be able to unbound and remove tokens from a liquidity pool. | BLOCKED        |                                                          |            |
 
 Useful resources include:
 
