@@ -32,6 +32,14 @@ A medium vulnerability is something that could potentially disrupt the chain.
 
 A low vulnerability is something that might slow down the chain or make it less efficient.
 
+## Contracts
+
+These challenges involve writing contracts. To claim, PRs must link to an open source repo.
+
+| Contract      | Description                                                                                                                                                                                                                                                                                                        | Claimed by | Reward   | PR(s) |
+| :------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------- | :------- | :---- |
+| Random beacon | Upgrade Confio's [rand contract](https://github.com/confio/rand) to work with the latest version of CosmWasm, and upload to Juno Mainnet. For more information about this contract see Simon's original [medium article](https://medium.com/@simonwarta/when-your-blockchain-needs-to-roll-the-dice-ed9da121f590). |            | 100 Juno |       |
+
 ## IBC
 
 One of the most exciting things about Juno smart contracts, is that they support the [Inter-Blockchain Communication protocol (IBC)](https://ibcprotocol.org/) by default. So much is possible.
