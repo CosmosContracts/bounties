@@ -61,9 +61,9 @@ NOTE: These challenges are currently BLOCKED until Osmosis adds support for IBC 
 
 | Task                 | Description                                                                                                                              | Reward         | PR                                                       | Claimed by |
 | :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------- | :------------- | -------------------------------------------------------- | :--------- |
-| Query price over IBC | Query price information for a trading pair over IBC for use in a contract.                                                               | Partial Payout | [#5](https://github.com/CosmosContracts/bounties/pull/5) | @giansalex |
-| Trade over IBC       | Swap two tokens over IBC on Osmosis.                                                                                                     | BLOCKED        |                                                          |            |
-| LP tokens over IBC   | Add tokens to a Liquidity pool, bond them to receive LP rewards. Should also be able to unbound and remove tokens from a liquidity pool. | BLOCKED        |                                                          |            |
+| Query price over IBC | Query price information for a trading pair over IBC for use in a contract.                                                               |                  |                                                          | @catShaark |
+| Trade over IBC       | Swap two tokens over IBC on Osmosis.                                                                                                     | UNBLOCKED        |                                                          | @catShaark |
+| LP tokens over IBC   | Add tokens to a Liquidity pool, bond them to receive LP rewards. Should also be able to unbound and remove tokens from a liquidity pool. | UNBLOCKED        |                                                          |            |
 
 Useful resources include:
 
