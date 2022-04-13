@@ -57,13 +57,12 @@ To claim these bounties, you must provide working open source code and successfu
 
 For these challenges, you'll need to create example CosmWasm contracts and documentation for interacting with Osmosis over IBC. In addition to $JUNO rewards, these challenges also have $OSMO rewards (amount TBD)!
 
-NOTE: These challenges are currently BLOCKED until Osmosis adds support for IBC queries or CosmWasm.
 
 | Task                 | Description                                                                                                                              | Reward         | PR                                                       | Claimed by |
 | :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------- | :------------- | -------------------------------------------------------- | :--------- |
-| Query price over IBC | Query price information for a trading pair over IBC for use in a contract.                                                               | Partial Payout | [#5](https://github.com/CosmosContracts/bounties/pull/5) | @giansalex |
-| Trade over IBC       | Swap two tokens over IBC on Osmosis.                                                                                                     | BLOCKED        |                                                          |            |
-| LP tokens over IBC   | Add tokens to a Liquidity pool, bond them to receive LP rewards. Should also be able to unbound and remove tokens from a liquidity pool. | BLOCKED        |                                                          |            |
+| Query price over IBC | Query price information for a trading pair over IBC for use in a contract.                                                               |   | [#18](https://github.com/CosmosContracts/bounties/pull/18) | @giansalex |
+| Trade over IBC       | Swap two tokens over IBC on Osmosis.                                                                                                     |   | [#18](https://github.com/CosmosContracts/bounties/pull/18) | @giansalex |
+| LP tokens over IBC   | Add tokens to a Liquidity pool, bond them to receive LP rewards. Should also be able to unbound and remove tokens from a liquidity pool. |   | [#18](https://github.com/CosmosContracts/bounties/pull/18) | @giansalex |
 
 Useful resources include:
 
