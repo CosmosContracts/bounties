@@ -32,17 +32,36 @@ A medium vulnerability is something that could potentially disrupt the chain.
 
 A low vulnerability is something that might slow down the chain or make it less efficient.
 
+## Cosmos SDK
+
+The bounties involve contribution to the Cosmos SDK. They will need to be implemented upstream and merged into `junod`.
+
+| Task                              | Reward     | Claimed by |
+|:----------------------------------|:-----------|------------|
+| Improve speed of Invarient checks | 10000 JUNO |            |
+
+### Improve speed of invarient checks
+Recently during Cosmos SDK chain halts, invarient checks have taken over 10 hours to pass. The poor performance is largely because invarient checks are single threaded, and as chain state grows they take longer and longer. Invarient checks are important and should not be skipped as they verify the state integrity of the chain.
+
+This bounty will involve improving the performance and speed of invarient checks. Potentially this could be done by doing invarient checks multi-threaded, but we will leave implementation up to those deciding to take on the bounty.
+
+The base reward is 10000 Juno.
+
+We will be benchmarking solutions, and there will be bonuses for speeding invarient checks up past over 100% improvement.
+
+NOTE: to claim this bounty, your solution will need to be merged into the main [Cosmos SDK repo](https://github.com/cosmos/cosmos-sdk) and go through the review process there.
+
 ## Contracts
 
 These challenges involve writing contracts. To claim, PRs must link to an open source repo.
 
-## IBC
+### IBC Contracts
 
 One of the most exciting things about Juno smart contracts, is that they support the [Inter-Blockchain Communication protocol (IBC)](https://ibcprotocol.org/) by default. So much is possible.
 
 To claim these bounties, you must provide working open source code and successfully make transactions on _mainnets_ of any of the networks specified.
 
-### Band protocol IBC Challenge
+#### Band protocol IBC Challenge
 
 Band protocol supports [requesting oracle data over IBC](https://docs.bandchain.org/whitepaper/cosmos-ibc.html). For this challenge, please implement a smart contract that demonstrates requesting oracle data over IBC. Be sure to demonstrate this working on Juno mainnet and provide adequate documentation for replication in the contract's `README.md` file.
 
