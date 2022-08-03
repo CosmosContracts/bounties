@@ -38,16 +38,16 @@ The bounties involve contribution to the Cosmos SDK. They will need to be implem
 
 | Task                              | Reward     | Claimed by |
 |:----------------------------------|:-----------|------------|
-| Improve speed of Invarient checks | 10000 JUNO |            |
+| Improve speed of Invariant checks | 10000 JUNO |            |
 
-### Improve speed of invarient checks
-Recently during Cosmos SDK chain halts, invarient checks have taken over 10 hours to pass. The poor performance is largely because invarient checks are single threaded, and as chain state grows they take longer and longer. Invarient checks are important and should not be skipped as they verify the state integrity of the chain.
+### Improve speed of invariant checks
+Recently during Cosmos SDK chain halts, invariant checks have taken over 10 hours to pass. The poor performance is largely because invariant checks are single threaded, and as chain state grows they take longer and longer. Invariant checks are important and should not be skipped as they verify the state integrity of the chain.
 
-This bounty will involve improving the performance and speed of invarient checks. Potentially this could be done by doing invarient checks multi-threaded, but we will leave implementation up to those deciding to take on the bounty.
+This bounty will involve improving the performance and speed of invariant checks. Potentially this could be done by doing invariant checks multi-threaded, but we will leave implementation up to those deciding to take on the bounty.
 
 The base reward is 10000 Juno.
 
-We will be benchmarking solutions, and there will be bonuses for speeding invarient checks up past over 100% improvement.
+We will be benchmarking solutions, and there will be bonuses for speeding invariant checks up past over 100% improvement.
 
 NOTE: to claim this bounty, your solution will need to be merged into the main [Cosmos SDK repo](https://github.com/cosmos/cosmos-sdk) and go through the review process there.
 
