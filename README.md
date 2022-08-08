@@ -51,11 +51,13 @@ The base reward is 10000 Juno.
 
 We will be benchmarking solutions, and there will be **significant** bonuses for speeding invariant checks up past over 100% improvement (i.e. <5mins total elapsed time in the example above).
 
-Any submission should be provided with sufficient evidence of a speedup e.g.:
+Any submission should be provided with sufficient evidence of a speedup, using the **phoenix-2 genesis used to restart Juno in July** e.g.:
 - reproducible benchmark in a github repo
 - a runnable example, hosted online
 
 Ideally you will submit several proofs. Simply submitting logs or screenshots is not adequate.
+
+The phoenix-2 genesis [can be found here](https://github.com/CosmosContracts/incident-response/blob/main/28-July-22/genesis.md) along with instructions for using it.
 
 Due to the fact this will be shared openly, _the first successful implementation that meets the criteria will take the bounty_.
 
