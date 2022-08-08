@@ -45,9 +45,21 @@ Recently during Cosmos SDK chain halts, invariant checks have taken over 10 hour
 
 This bounty will involve improving the performance and speed of invariant checks. Potentially this could be done by doing invariant checks multi-threaded, but we will leave implementation up to those deciding to take on the bounty.
 
+The minimum threshold is taking 25% off the unaltered invariant check time. i.e. if checks take 10 mins, your implementation saves 2min 30s.
+
 The base reward is 10000 Juno.
 
-We will be benchmarking solutions, and there will be bonuses for speeding invariant checks up past over 100% improvement.
+We will be benchmarking solutions, and there will be **significant** bonuses for speeding invariant checks up past over 100% improvement (i.e. <5mins total elapsed time in the example above).
+
+Any submission should be provided with sufficient evidence of a speedup e.g.:
+- reproducible benchmark in a github repo
+- a runnable example, hosted online
+
+Ideally you will submit several proofs. Simply submitting logs or screenshots is not adequate.
+
+Due to the fact this will be shared openly, _the first successful implementation that meets the criteria will take the bounty_.
+
+Teams or individuals that find further optimizations will be eligible for additional discretionary awards.
 
 NOTE: to claim this bounty, your solution will need to be merged into the main [Cosmos SDK repo](https://github.com/cosmos/cosmos-sdk) and go through the review process there.
 
