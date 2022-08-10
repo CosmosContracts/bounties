@@ -38,7 +38,7 @@ The bounties involve contribution to the Cosmos SDK. They will need to be implem
 
 | Task                              | Reward     | Claimed by |
 |:----------------------------------|:-----------|------------|
-| Improve speed of Invariant checks | 10000 JUNO |            |
+| Improve speed of Invariant checks | 10000 JUNO | @blazeroni |
 
 ### Improve speed of invariant checks
 Recently during Cosmos SDK chain halts, invariant checks have taken over 10 hours to pass. The poor performance is largely because invariant checks are single threaded, and as chain state grows they take longer and longer. Invariant checks are important and should not be skipped as they verify the state integrity of the chain.
