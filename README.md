@@ -81,7 +81,7 @@ Band protocol supports [requesting oracle data over IBC](https://docs.bandchain.
 
 | Task                         | Description                                           | Reward   | Claimed by |
 | :--------------------------- | :---------------------------------------------------- | :------- | :--------- |
-| Request oracle data over IBC | Implement a contract to request oracle data over IBC. | 500 JUNO |            |
+| Request oracle data over IBC | Implement a contract to request oracle data over IBC. | 500 JUNO |      @vuong177      |
 
 #### Rules
 
